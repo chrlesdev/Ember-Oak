@@ -8,9 +8,9 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 export default function NavbarUI() {
   const routes = [
     { name: "Home", link: "/" },
-    { name: "Menu", link: "/Menu" },
-    { name: "Events", link: "/Events" },
-    { name: "Services", link: "/Services" },
+    { name: "Menu", link: "/menu" },
+    { name: "Events", link: "/events" },
+    { name: "Services", link: "/services" },
   ];
 
   return (

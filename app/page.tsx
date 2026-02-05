@@ -1,5 +1,6 @@
 import NavbarUI from "@/components/NavbarUi";
 import DashboardUI from "@/components/DashboardUI";
+import FooterUI from "@/components/FooterUI";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <section>
         <DashboardUI />
       </section>
-      <footer></footer>
+      <FooterUI />
     </div>
   );
 }
