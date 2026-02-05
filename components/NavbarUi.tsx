@@ -36,7 +36,7 @@ export default function NavbarUI() {
 
         <div className="flex items-center gap-4">
           <Button className="group relative hidden md:flex items-center justify-center bg-[#D48C45] hover:bg-[#b07439] text-[#1A1A1A] font-bold rounded-md px-8 h-12 uppercase tracking-widest overflow-hidden transition-all duration-300 ">
-            <span className="inline-block transition-transform duration-500 ease-out group-hover:-translate-y-[150%]">Book a Table</span>
+            <span className="inline-block transition-transform duration-500 ease-out group-hover:-translate-y-[200%]">Book a Table</span>
 
             <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out translate-y-[150%] group-hover:translate-y-0">Book Now</span>
           </Button>
