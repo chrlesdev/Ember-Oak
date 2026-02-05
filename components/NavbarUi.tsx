@@ -10,7 +10,7 @@ export default function NavbarUI() {
     { name: "Home", link: "/" },
     { name: "Menu", link: "/menu" },
     { name: "Events", link: "/events" },
-    { name: "Services", link: "/services" },
+    { name: "Reservation", link: "/reservation" },
   ];
 
   return (
