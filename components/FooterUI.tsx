@@ -52,7 +52,7 @@ export default function FooterUI() {
     {
       title: "Visit",
       links: [
-        { name: "Reservations", href: "/" },
+        { name: "Reservations", href: "/reservation" },
         { name: "Gift Cards", href: "/" },
         { name: "Contact", href: "/" },
         { name: "Careers", href: "/" },

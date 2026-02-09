@@ -22,11 +22,14 @@ export default function DashboardUI() {
           <p className="font-sans text-[#F5E6CC]/70 text-lg max-w-md leading-relaxed mb-10">Experience a symphony of wood-fired flavors and artisanal craft. Where heritage oak meets the intensity of the ember.</p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="group relative hidden md:flex items-center justify-center bg-[#D48C45] hover:bg-[#b07439] text-[#1A1A1A] font-bold rounded-md px-8 h-14 uppercase tracking-widest overflow-hidden transition-all duration-300 ">
+            <Link
+              href={"/reservation"}
+              className="group relative hidden md:flex items-center justify-center bg-[#D48C45] hover:bg-[#b07439] text-[#1A1A1A] font-bold rounded-md px-8 h-14 uppercase tracking-widest overflow-hidden transition-all duration-300 "
+            >
               <span className="inline-block transition-transform duration-500 ease-out group-hover:-translate-y-[200%]">Book a Table</span>
 
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out translate-y-[150%] group-hover:translate-y-0">Book Now</span>
-            </Button>
+            </Link>
 
             <Link href={"/menu"}>
               <Button
@@ -42,10 +45,10 @@ export default function DashboardUI() {
           </div>
         </div>
 
-        <div className="relative hidden lg:block py-12">
-          <div className="absolute -inset-2 border border-[#D48C45]/30 translate-x-6 translate-y-6"></div>
+        <div className="relative block lg:py-12">
+          <div className="absolute -inset-2 border border-[#D48C45]/30 translate-x-4 translate-y-4 lg:translate-x-6 lg:translate-y-6"></div>
           <div className="relative h-[550] w-full overflow-hidden border border-white/10 shadow-2xl">
-            <Image width={550} height={550} src="/food.jpg" alt="Fine Dining" className="object-cover w-full h-full grayscale-20% hover:scale-110 transition-transform duration-1000" />
+            <Image fill src="/food.jpg" alt="Fine Dining" className="object-cover w-full h-full grayscale-20% hover:scale-110 transition-transform duration-1000" />
             <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A] via-transparent to-transparent opacity-60"></div>
           </div>
         </div>
@@ -69,14 +72,19 @@ export default function DashboardUI() {
             </p>
           </div>
 
-          <div className="flex-1 w-full flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-4/5 overflow-hidden shadow-2xl">
-              <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-[#D48C45]/40 z-10"></div>
+          <div className="relative w-full max-w-md aspect-4/5 overflow-hidden shadow-2xl bg-[#1a1a1a]">
+            {/* Added a background color so the SVG isn't floating in void */}
 
-              <Image src="/service.svg" alt="Elegant restaurant service" width={50} height={50} className="w-full h-full object-cover grayscale-30% hover:scale-110 transition-transform duration-1000" />
+            <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-[#D48C45]/40 z-10"></div>
 
-              <div className="absolute inset-0 bg-linear-to-tr from-[#1A1A1A]/40 to-transparent"></div>
-            </div>
+            <Image
+              src="/service.svg"
+              alt="Elegant restaurant service"
+              fill // Use fill instead of fixed width/height for aspect-ratio containers
+              className="object-contain p-12 grayscale-30% hover:scale-110 transition-transform duration-1000"
+            />
+
+            <div className="absolute inset-0 bg-linear-to-tr from-[#1A1A1A]/40 to-transparent pointer-events-none"></div>
           </div>
         </div>
 

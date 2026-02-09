@@ -103,7 +103,6 @@ export default function MenuUI() {
 
               {section.data.map((item, idx) => {
                 const isActive = activeImages[section.title] === item.photo;
-
                 return (
                   <div key={idx} onMouseEnter={() => setActiveImages({ ...activeImages, [section.title]: item.photo })} onClick={() => handleItemClick(section.title, item.photo)} className="group cursor-pointer py-4">
                     <div className="flex justify-between items-baseline gap-4">
@@ -114,7 +113,6 @@ export default function MenuUI() {
 
                       <span className={`text-sm font-sans italic transition-colors ${isActive ? "text-[#D48C45]" : "text-[#D48C45]/30"}`}>{section.title === "Appetizers" ? "24" : section.title === "Desserts" ? "18" : "52"}</span>
                     </div>
-
                     <p
                       className={`text-[#F5E6CC]/50 font-light mt-2 max-w-md italic text-sm leading-relaxed transition-all duration-500 ${
                         isActive ? "opacity-100 max-h-20" : "opacity-0 max-h-0 overflow-hidden md:group-hover:opacity-70 md:group-hover:max-h-20"

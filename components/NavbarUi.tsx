@@ -9,7 +9,6 @@ export default function NavbarUI() {
   const routes = [
     { name: "Home", link: "/" },
     { name: "Menu", link: "/menu" },
-    { name: "Events", link: "/events" },
     { name: "Reservation", link: "/reservation" },
   ];
 
@@ -35,11 +34,14 @@ export default function NavbarUI() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="group relative hidden md:flex items-center justify-center bg-[#D48C45] hover:bg-[#b07439] text-[#1A1A1A] font-bold rounded-md px-8 h-12 uppercase tracking-widest overflow-hidden transition-all duration-300 ">
+          <Link
+            href={"/reservation"}
+            className="group relative hidden md:flex items-center justify-center bg-[#D48C45] hover:bg-[#b07439] text-[#1A1A1A] font-bold rounded-md px-8 h-12 uppercase tracking-widest overflow-hidden transition-all duration-300 "
+          >
             <span className="inline-block transition-transform duration-500 ease-out group-hover:-translate-y-[200%]">Book a Table</span>
 
             <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out translate-y-[150%] group-hover:translate-y-0">Book Now</span>
-          </Button>
+          </Link>
 
           <div className="md:hidden ">
             <Sheet>
@@ -60,7 +62,9 @@ export default function NavbarUI() {
                       {item.name}
                     </Link>
                   ))}
-                  <Button className="mt-6 bg-[#D48C45] text-[#1A1A1A] font-bold rounded-none py-6 uppercase">Make a Reservation</Button>
+                  <Link href={"/reservation"} className=" flex justify-center rounded-md mt-6 bg-[#D48C45] text-[#1A1A1A] font-bold  py-6 uppercase">
+                    Make a Reservation
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
